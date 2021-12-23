@@ -16,8 +16,9 @@ import parenkov.helpers.Attach;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
+import static parenkov.helpers.Attach.getSessionId;
 
-public class TestBase extends Attach {
+public class TestBase {
 
     private static HostConfig config = ConfigFactory.create(HostConfig.class);
 
