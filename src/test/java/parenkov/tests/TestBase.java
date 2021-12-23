@@ -60,8 +60,6 @@ public class TestBase {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         closeWebDriver();
-        if (config.getDeviceHost().equals("browserstack")) {
-            Attach.attachVideo(sessionId);
-        }
+        Attach.attachVideo(sessionId);
     }
 }
