@@ -3,7 +3,7 @@
 - remote Browserstack device;
 - remote selenoid emulator device;
 - local emulator device;
-- local real smartphone<br/><br/>
+- local real smartphone<br/>
 ### Запуск тестов удаленно
 На Browserstack: 
 ```
