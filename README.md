@@ -5,7 +5,7 @@
 - local emulator device;
 - local real smartphone<br/>
 ### Запуск тестов удаленно
-На Browserstack: 
+**На Browserstack**: 
 ```
 gradle clean browserstack -DdeviceHost=browserstack
 ```
@@ -24,7 +24,8 @@ name=android_tests // значение для примера
 
 Также для прохождения теста с Browserstack необходим файл **credentials.properties**, который сформирован в виде Create/Update Text File в конфигурации [Jenkins job](https://jenkins.autotests.cloud/job/08-WakeUpTheo-lesson-22/)
 
-На эмуляторе сервера selenide проекта [autotests.cloud](https://selenoid.autotests.cloud/#/):
+
+**На эмуляторе сервера selenide проекта [autotests.cloud](https://selenoid.autotests.cloud/#/)**:
 ```
 gradle clean test -DdeviceHost=selenoid
 ```
@@ -42,7 +43,7 @@ appPath=https://github.com/wikimedia/apps-android-wikipedia/releases/download/la
 
 
 ### Запуск тестов локально
-На эмуляторе: 
+**На эмуляторе**: 
 ```
 gradle clean test -DdeviceHost=emulator
 ```
@@ -57,7 +58,9 @@ appPackage=org.wikipedia.alpha
 appActivity=org.wikipedia.main.MainActivity
 appPath=src/test/resources/app-alpha-universal-release.apk
 ```
-На смартфоне:
+
+
+**На смартфоне**:
 ```
 gradle clean test -DdeviceHost=smartphone
 ```
