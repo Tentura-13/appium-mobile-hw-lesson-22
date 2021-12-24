@@ -17,10 +17,13 @@ url=http://hub.browserstack.com/wd/hub
 appUrl=bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c // для Samsung Galaxy S9
 device=Samsung Galaxy S9 // для Samsung Galaxy S9
 osVersion=8.0 // для Samsung Galaxy S9
-project=Android Project // любое значение
-build=build-1 // любое значение
-name=android_tests // любое значение
+project=Android Project // значение для примера
+build=build-1 // значение для примера
+name=android_tests // значение для примера
 ```
+
+Также для прохождения теста с Browserstack необходим файл **credentials.properties**, который сформирован в виде Create/Update Text File в конфигурации [Jenkins job](https://jenkins.autotests.cloud/job/08-WakeUpTheo-lesson-22/)
+
 На эмуляторе сервера selenide проекта [autotests.cloud](https://selenoid.autotests.cloud/#/):
 ```
 gradle clean test -DdeviceHost=selenoid
