@@ -5,7 +5,7 @@
 - local emulator device;
 - local real smartphone<br/>
 ### Запуск тестов удаленно
-**На Browserstack**: 
+**На [Browserstack](https://www.browserstack.com/)**: 
 ```
 gradle clean browserstack -DdeviceHost=browserstack
 ```
