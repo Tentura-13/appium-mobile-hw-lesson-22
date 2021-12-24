@@ -25,7 +25,7 @@ name=android_tests // значение для примера
 Также для прохождения теста на авторизацию на Browserstack необходим файл **credentials.properties**, который сформирован в виде Create/Update Text File в конфигурации [Jenkins job](https://jenkins.autotests.cloud/job/08-WakeUpTheo-lesson-22/)
 
 
-**На эмуляторе сервера selenide проекта [autotests.cloud](https://selenoid.autotests.cloud/#/)**:
+**На эмуляторе сервера selenoid проекта [autotests.cloud](https://selenoid.autotests.cloud/#/)**:
 ```
 gradle clean test -DdeviceHost=selenoid
 ```
