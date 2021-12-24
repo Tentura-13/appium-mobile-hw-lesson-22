@@ -22,7 +22,7 @@ build=build-1 // значение для примера
 name=android_tests // значение для примера
 ```
 
-Также для прохождения теста с Browserstack необходим файл **credentials.properties**, который сформирован в виде Create/Update Text File в конфигурации [Jenkins job](https://jenkins.autotests.cloud/job/08-WakeUpTheo-lesson-22/)
+Также для прохождения successful login теста с Browserstack необходим файл **credentials.properties**, который сформирован в виде Create/Update Text File в конфигурации [Jenkins job](https://jenkins.autotests.cloud/job/08-WakeUpTheo-lesson-22/)
 
 
 **На эмуляторе сервера selenide проекта [autotests.cloud](https://selenoid.autotests.cloud/#/)**:
