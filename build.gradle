@@ -62,9 +62,9 @@ tasks.withType(Test) {
     }
 }
 
-task android(type: Test) {
-    useJUnitPlatform {
-        includeTags "android"
+test {
+    useJUnitPlatform() {
+        excludeTags "browserstack"
     }
 }
 
