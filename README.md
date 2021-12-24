@@ -1,7 +1,71 @@
-## Example Android mobile autotests launching on: 
-- remote Browserstack device
-- remote selenoid emulator device
-- local emulator device
-- local real smartphone
+## Автоматизация мобильных тестов на Android на примере мобильного приложения Wikipedia
+Реализован запуск тестов на следующем окружении:
+- remote Browserstack device;
+- remote selenoid emulator device;
+- local emulator device;
+- local real smartphone<br/><br/>
+### Запуск тестов удаленно
+На Browserstack: 
+```
+gradle clean browserstack -DdeviceHost=browserstack
+```
+Состав файла **browserstack.properties**:
+```
+user=<значение user с Browserstack>
+key=<значение key с Browserstack>
+url=http://hub.browserstack.com/wd/hub
+appUrl=bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c // для Samsung Galaxy S9
+device=Samsung Galaxy S9 // для Samsung Galaxy S9
+osVersion=8.0 // для Samsung Galaxy S9
+project=Android Project // любое значение
+build=build-1 // любое значение
+name=android_tests // любое значение
+```
+На эмуляторе сервера selenide проекта [autotests.cloud](https://selenoid.autotests.cloud/#/):
+```
+gradle clean test -DdeviceHost=selenoid
+```
+Состав файла **selenoid.properties**:
+```
+url=https://<username>:<password>@selenoid.autotests.cloud/wd/hub/
+deviceName=android
+osVersion=8.1
+locale=en
+language=en
+appPackage=org.wikipedia.alpha
+appActivity=org.wikipedia.main.MainActivity
+appPath=https://github.com/wikimedia/apps-android-wikipedia/releases/download/latest/app-alpha-universal-release.apk
+```
 
-Homework lesson #22
+
+### Запуск тестов локально
+На эмуляторе: 
+```
+gradle clean test -DdeviceHost=emulator
+```
+Состав файла **emulator.properties**:
+```
+url=http://127.0.0.1:4723/wd/hub
+deviceName=Pixel_4_API_30
+osVersion=11.0
+locale=en
+language=en
+appPackage=org.wikipedia.alpha
+appActivity=org.wikipedia.main.MainActivity
+appPath=src/test/resources/app-alpha-universal-release.apk
+```
+На смартфоне:
+```
+gradle clean test -DdeviceHost=smartphone
+```
+Состав файла **smartphone.properties**:
+```
+url=http://127.0.0.1:4723/wd/hub
+deviceName=<имя устройства> // в cmd: adb devices
+osVersion=<версия Android на устройстве>
+locale=en
+language=en
+appPackage=org.wikipedia.alpha
+appActivity=org.wikipedia.main.MainActivity
+appPath=src/test/resources/app-alpha-universal-release.apk
+```
